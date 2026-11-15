@@ -44,7 +44,7 @@
     "post_processing": "RealESRGAN x4plus 逐帧 4x 超分至 5376x3072（code/upscale/），超分文件 165 MB 未入库"
   },
   "human_authorship": {
-    "note": "整条提示词由作者发起并定稿：用 DeepSeek V4.1F 与 H3 官方 prompt skill 起草，作者逐版判断、改写、定稿共 12 版，把分镜节奏、材质、时间码、伪日文文字清单逐条写死；自己搭 ComfyUI 工作流（MiniMax H3 FL2VA 子图 + Pika Flex LoRA），把 sigmas 手改成 6 步，在 18 条渲染里选出 finalv12 的第 4 条，并写了 RealESRGAN 逐帧超分脚本。",
+    "note": "提示词由作者发起并定稿：用 DeepSeek V4.1F 与 H3 官方 prompt skill 起草，作者逐版判断、改写、定稿共 12 版，包含分镜节奏、镜头运动、材质、音频等；使用ComfyUI官方提供的模板跑Prompt迭代+种子搜索，在超过25条渲染里选出 finalv12 的第 4 条，并用Vibecoding RealESRGAN 逐帧超分脚本进行后期超分。",
     "prompt_iterations": 12,
     "renders_considered": 18,
     "post_edit": true,
