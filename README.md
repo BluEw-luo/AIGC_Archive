@@ -40,9 +40,16 @@
 
 ## 仓库内容
 
-- `prompts/<作品>/` —— 一件作品一个目录：`prompt.md`（提示词与参数）、`meta.json`（模型、种子等元数据）、`workflow.json`（ComfyUI 工作流）、`01.png` 等成图；
+- `prompts/<作品>/` —— 一件作品一个目录：`prompt.md`（提示词与参数）、`meta.json`（模型、种子等元数据）、`workflow.json`（ComfyUI 工作流）、`01.png` 等成图 / `sample.mp4` 示例视频；
+- `code/` —— 配合作品的脚本（MIT）：`code/upscale/` 是 RealESRGAN x4 视频逐帧超分；
 - `_templates/` —— 新增作品用的模板；
 - `LICENSES/` —— 协议全文。
+
+## 作品
+
+| 作品 | 日期 | 内容 | 原片 |
+| --- | --- | --- | --- |
+| [刷り損じ / MISPRINT](prompts/2026-11-misprint/) | 2026-11-15 | MiniMax H3 T2VA，14 镜，10 秒，1344×768 | [B 站](https://www.bilibili.com/video/BV152sW6xEfQ/) |
 
 ## 来源与致谢
 

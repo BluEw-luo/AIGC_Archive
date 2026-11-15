@@ -1,0 +1,64 @@
+{
+  "title": "刷り損じ / MISPRINT",
+  "slug": "2026-11-misprint",
+  "date": "2026-11-15",
+  "platform": "Bilibili",
+  "source_url": "https://www.bilibili.com/video/BV152sW6xEfQ/",
+  "media": [
+    "01.png",
+    "02.png",
+    "sample.mp4"
+  ],
+  "generation": {
+    "tool": "ComfyUI",
+    "tool_version": "0.45.0（前端 1.59.1）",
+    "model": "minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+    "model_source": "https://huggingface.co/Comfy-Org/MiniMax-H3",
+    "model_license": "MiniMax H3 Community License Agreement",
+    "loras": [
+      {
+        "name": "pika_h3_flex_fl2va_v1_bf16.safetensors",
+        "strength": 1.0,
+        "source": "https://huggingface.co/Pika-Labs/Pika-H3-Flex",
+        "license": "MiniMax H3 Community License Agreement",
+        "purpose": "Pika 6 step 加速"
+      }
+    ],
+    "text_encoder": "qwen3vl_32b_minimax_h3_int8_convrot.safetensors",
+    "vae": [
+      "minimax_h3_sol_vae_int8_convrot.safetensors",
+      "minimax_h3_audio_vae_fp32.safetensors"
+    ],
+    "seed": 112844716115522,
+    "steps": 6,
+    "cfg": null,
+    "cfg_note": "BasicGuider，无 CFG 输入",
+    "sampler": "lcm",
+    "scheduler": "ManualSigmas: 1.0, 0.972973, 0.923077, 0.8, 0.571429, 0.333333, 0.0",
+    "resolution": "1344x768",
+    "fps": 24,
+    "frames": 243,
+    "duration_seconds": 10.125,
+    "audio": "与画面同一次生成，32 kHz 立体声；未使用外部音频",
+    "hardware": "RTX 3080 本地部署，约 99 s/step",
+    "post_processing": "RealESRGAN x4plus 逐帧 4x 超分至 5376x3072（code/upscale/），超分文件 165 MB 未入库"
+  },
+  "human_authorship": {
+    "note": "整条提示词由作者发起并定稿：用 DeepSeek V4.1F 与 H3 官方 prompt skill 起草，作者逐版判断、改写、定稿共 12 版，把分镜节奏、材质、时间码、伪日文文字清单逐条写死；自己搭 ComfyUI 工作流（MiniMax H3 FL2VA 子图 + Pika Flex LoRA），把 sigmas 手改成 6 步，在 18 条渲染里选出 finalv12 的第 4 条，并写了 RealESRGAN 逐帧超分脚本。",
+    "prompt_iterations": 12,
+    "renders_considered": 18,
+    "post_edit": true,
+    "post_edit_note": "没有手工修图、剪辑、调色或补帧；唯一的后期是 RealESRGAN x4plus 逐帧超分（脚本见 code/upscale/）"
+  },
+  "license": "CC-BY-4.0",
+  "credits": [
+    {
+      "role": "inspiration",
+      "title": "MiniMax H3这个视觉效果谁敢信是一次抽卡...",
+      "author": "AI幻想局局长",
+      "url": "https://www.bilibili.com/video/BV1XvMy6iEvL/",
+      "note": "部分画面思路（几何排版与文字表现）受该视频启发；未使用其画面、音频或提示词原文，只借鉴方向。"
+    }
+  ],
+  "notes": "工作流以子图（Subgraph）形式保存：有效的提示词与 seed 在子图实例节点 140 上；子图内部的 MiniMaxH3ImageToVideo 节点还留着模板自带的示例提示词，加载后以实例值为准。sample.mp4 的容器 metadata 里带着当时实际执行的 API 格式 prompt（RandomNoise 的值即 112844716115522），可作对照。B 站发布版是 4x 超分版。"
+}
