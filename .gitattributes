@@ -1,0 +1,23 @@
+# 统一换行符，避免跨平台 diff 噪音
+* text=auto eol=lf
+
+# 图片与视频按二进制处理，不做文本 diff
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.webp binary
+*.gif  binary
+*.mp4  binary
+*.webm binary
+*.mp3  binary
+*.wav  binary
+
+# ---- Git LFS（可选）----
+# 本机尚未安装 git-lfs。大文件确实要入库时：
+#   1) 安装并初始化：sudo dnf install git-lfs && git lfs install
+#   2) 取消下面几行的注释
+#   3) git add --renormalize .
+# *.png  filter=lfs diff=lfs merge=lfs -text
+# *.jpg  filter=lfs diff=lfs merge=lfs -text
+# *.webp filter=lfs diff=lfs merge=lfs -text
+# *.mp4  filter=lfs diff=lfs merge=lfs -text

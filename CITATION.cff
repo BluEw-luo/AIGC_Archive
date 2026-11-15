@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "如果要在你的作品中引用本仓库的内容，请使用以下格式。"
+title: "AIGC Archive"
+abstract: "公开的 AIGC 提示词、ComfyUI 工作流与示例成图归档。内容以 CC BY 4.0 授权，代码以 MIT 授权。"
+type: dataset
+authors:
+  - name: "BluEw-luo"
+    alias: "BluEw-luo"
+date-released: "2026-11-16"
+license: CC-BY-4.0
+url: "https://github.com/BluEw-luo/AIGC_Archive"
+repository-code: "https://github.com/BluEw-luo/AIGC_Archive"
+keywords:
+  - AIGC
+  - prompt
+  - ComfyUI
+  - stable-diffusion
+  - generative-ai

@@ -1,0 +1,28 @@
+# ---- 模型权重：体积大，且再分发受底模许可约束，一律不入库 ----
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+*.bin
+*.onnx
+*.gguf
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# ---- 编辑器 / 系统 ----
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# ---- 临时文件 ----
+*.tmp
+*.log
+*.part
+.gradio/
